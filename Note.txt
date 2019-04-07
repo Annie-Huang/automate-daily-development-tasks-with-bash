@@ -28,3 +28,16 @@ http://localhost:3000/api/posts/2
 
 curl -iL https://google.com -o google.txt
 curl https://swapi.co/api/people/1/ | jsome
+
+---------
+
+Inside script.sh:
+echo "$1 world"
+In terminal:
+./script.sh Howdy       << print "Howdy world"
+
+echo "Initializing JS project at $(pwd)"
+echo $PATH
+which node
+cp init-js.sh /usr/local/bin/init-js
+which init-js
