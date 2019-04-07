@@ -41,3 +41,15 @@ echo $PATH
 which node
 cp init-js.sh /usr/local/bin/init-js
 which init-js
+
+
+---------
+
+var=123
+export var      << This will make the var variable visible to all child processes, to all commands,
+                   all scripts that are executed in the context of this shell. If we run script now,
+                   we can see that it's visible, and that it echoed it out correctly.
+./script.sh   (which contains echo $var)
+unset var
+
+env             << see all environment variables
