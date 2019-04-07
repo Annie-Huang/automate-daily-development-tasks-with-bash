@@ -66,3 +66,13 @@ if [[ -e conditionals.sh ]]; then       << check if the file exist.
 if [[ -z $USER ]]; then                 << check if the USER variable is empty.
 
 curl -ILs https://example.org | head -n 1 | cut -d ' ' -f 2         << take a the staus code out from the first line.
+
+---------
+
+ps ax                           << all the running process
+ps ax | grep Chrome | less
+uglifyjs -c -m -- index.js      << I'm going to pass the compress and mangle flags. Then we do two dashes, and then the file name that we want to compress.
+uglifyjs -c -m -- index.js | gzip -9 | wc -c
+
+ls > ls.txt
+echo "hi" >> ls.txt         << append
