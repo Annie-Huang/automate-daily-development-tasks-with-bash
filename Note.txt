@@ -1,0 +1,9 @@
+grep "npm.config.get" lib/npm.js
+grep "npm.config.get" lib/**/*.js
+grep --color "npm.config.get" lib/npm.js
+grep --color -n "npm.config.get" lib/npm.js
+grep --color -n -C 5 "npm.config.get" lib/npm.js        << show the context around the line.
+grep --color -n -e "npm.config.[gs]et" lib/npm.js        << regrex expression, find 'npm.config.get' or 'npm.config.set' in the line
+man grep
+
+
