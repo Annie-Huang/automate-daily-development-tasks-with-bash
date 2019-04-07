@@ -53,3 +53,7 @@ export var      << This will make the var variable visible to all child processe
 unset var
 
 env             << see all environment variables
+
+---------
+
+echo $?         << exit statuses in bash. 0: OK, 1: fail
