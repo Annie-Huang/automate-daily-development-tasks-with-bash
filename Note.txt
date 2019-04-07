@@ -6,4 +6,25 @@ grep --color -n -C 5 "npm.config.get" lib/npm.js        << show the context arou
 grep --color -n -e "npm.config.[gs]et" lib/npm.js        << regrex expression, find 'npm.config.get' or 'npm.config.set' in the line
 man grep
 
+------------
 
+curl https://example.com
+curl https://swapi.co/api/people/1/
+curl -i https://swapi.co/api/people/2
+curl -i https://swapi.co/api/people/2/
+curl -iL https://swapi.co/api/people/2
+curl -iL https://swapi.co/api/people/2
+curl -H "Authorization: Bearer 123" localhost:3000/api-protected/posts
+
+curl -X POST -H "Content-Type: application/json" -d '{"title": "Curling", "author": "Cameron"}' localhost:3000/api/posts
+curl localhost:3000/api/posts
+
+curl -X POST --data-urlencode title="Curling again" --data-urlencode author="Cameron" http://localhost:3000/api/posts
+
+curl -i -X PUT \
+-d '{ "title": "Changed title" }' \
+-H "Content-Type: application/json" \
+http://localhost:3000/api/posts/2
+
+curl -iL https://google.com -o google.txt
+curl https://swapi.co/api/people/1/ | jsome
